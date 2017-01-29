@@ -1,0 +1,1230 @@
+html,
+body,
+div,
+h1,
+h2,
+h3,
+a,
+img,
+ol,
+ul,
+li,
+fieldset,
+form,
+aside,
+header,
+menu,
+nav,
+section {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+* {
+    font-family: 'Nexa';
+    box-sizing: border-box;
+}
+
+
+/*logo*/
+
+.verhaaltekst p:nth-child(2) {
+    color: #00d66c;
+    font-weight: 500;
+    margin-left: 12em;
+    font-size: 0.8em;
+    margin-top: -0.5em;
+}
+
+.verhaaltekst p:nth-child(3) {
+    font-size: 0.9em;
+    font-weight: 0;
+    color: navy;
+    text-align: left;
+    margin-left: 1.4em;
+    margin-top: 0;
+    margin-bottom: 0.4em;
+}
+
+.verhaaltekst p:nth-child(4) {
+    font-size: 0.8em;
+    font-weight: 0;
+    color: grey;
+    text-align: left;
+    margin-left: 1.6em;
+    margin-top: 0.5em;
+}
+
+img.mobielverliefd,
+img.deskverliefd,
+img.tabverliefd {
+    animation: pulse 1s ease infinite;
+    margin-top: -4em;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(0.8);
+    }
+    50% {
+        transform: scale(0.9);
+    }
+    100% {
+        transform: scale(0.8);
+    }
+}
+
+
+/*HEADER*/
+
+header {
+    height: 3em;
+}
+
+header div {
+    position: relative;
+    background-color: white;
+    height: 3em;
+    box-shadow: 0.1em 0.2em 1em -0.1em #888888;
+}
+
+header div > * {
+    position: absolute;
+    margin-top: 0.5em;
+    height: 2em;
+}
+
+header div img {
+    margin-left: 1em;
+    width: 10.2em;
+    height: 2em;
+}
+
+header div a img {
+    margin-left: 17em;
+    margin-top: 0.2em;
+    width: 1.7em;
+    height: 1.7em;
+}
+
+#loginform {
+    position: absolute;
+    right: 7em;
+}
+
+#registreer {
+    position: absolute;
+    right: 1em;
+}
+
+header div h1 {
+    display: none;
+}
+
+
+/*HEADER*/
+
+.inputveld {
+    position: relative;
+    margin-bottom: 2em;
+}
+
+.inputveld input {
+    border: none;
+    background: white;
+    width: 180px;
+    height: 36px;
+    border-radius: 18px;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
+    margin-left: 1em;
+}
+
+.inputveld input:focus {
+    outline: none;
+}
+
+.inputveld .placeholder {
+    font: 12px/16px 'Nexa';
+    position: absolute;
+    top: 60%;
+    left: 21px;
+    margin-top: -8px;
+    color: gray;
+    background-color: inherit;
+    transition: all .1s linear;
+    pointer-events: none;
+    margin-left: 2em;
+}
+
+.inputveld input:focus + .placeholder,
+.inputveld input:not(:invalid) + .placeholder {
+    color: rgb(255, 50, 104);
+    top: 0%;
+    margin-top: -16px;
+    margin-left: 0.4em;
+}
+
+.inputveld input:valid {
+    background-color: rgb(0, 214, 108);
+}
+
+.inputveld input:invalid {
+    background-color: white;
+}
+
+
+/*SORTEREN*/
+
+main section:nth-of-type(3) {
+    flex-direction: row;
+    display: flex;
+    position: relative;
+}
+
+.volgorde {
+    background-color: rgb(255, 50, 104);
+    color: white;
+    font-family: "Nexa";
+    font-size: 1em;
+    border-radius: 0.5em;
+    border-width: 0.01em;
+    border-color: none;
+    flex: 0.2 0 0;
+    height: 2em;
+    box-shadow: 0.1em 0.2em 1em -0.1em rgb(202, 43, 85);
+    margin-left: 2em;
+    padding-right: 1.4em;
+    padding-left: 1.4em;
+}
+
+section button {
+    background-color: #2800a0;
+    color: white;
+    font-family: "Nexa";
+    font-size: 1em;
+    border-radius: 1em;
+    border-color: none;
+    border: none;
+    flex: 0.2 0 0;
+    /*    height: 2em;*/
+    box-shadow: 0.1em 0.2em 1em -0.1em navy;
+    margin-top: 1em;
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+.registreerga {
+    text-align: center;
+    margin-left: 1em;
+    border-radius: 0.5em;
+    top: 22em;
+    margin-bottom: 0em;
+    width: 6.5em;
+    left: 6em;
+    padding-right: 1em;
+    padding-top: 1em;
+    padding-left: 1em;
+    padding-bottom: 1em;
+    border: none;
+    background-color: gray;
+    text-decoration: none;
+    font-family: "Nexa";
+    transition: all 0.5s;
+    font-weight: 200;
+    color: white;
+}
+
+.login {
+    text-align: center;
+    margin-left: 5em;
+    margin-top: 2em;
+    border-radius: 0.5em;
+    top: 22em;
+    margin-bottom: 0em;
+    width: 7em;
+    left: 6em;
+    padding-right: 1em;
+    padding-top: 1em;
+    padding-left: 1em;
+    padding-bottom: 1em;
+    border: none;
+    background-color: rgb(255, 50, 104);
+    text-decoration: none;
+    font-family: "Nexa";
+    transition: all 0.5s;
+    font-weight: 200;
+    color: white;
+}
+
+.annuleer {
+    text-align: center;
+    border-radius: 0.5em;
+    top: 22em;
+    margin-bottom: 3em;
+    left: 6em;
+    padding-right: 1em;
+    padding-top: 1em;
+    padding-left: 1em;
+    padding-bottom: 1em;
+    border: none;
+    background-color: navy;
+    text-decoration: none;
+    font-family: "Nexa";
+    transition: all 0.5s;
+    font-weight: 200;
+    color: white;
+}
+
+#kiesgenre {
+    border-radius: 0.5em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    padding-left: 2em;
+    padding-right: 3em;
+    margin-top: 2em;
+}
+
+#kiesvolgorde {
+    border-radius: 0.5em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    padding-left: 1em;
+    padding-right: 1em;
+    margin-top: 1em;
+    margin-left: 2.5em;
+    background-color: rgb(255, 50, 104);
+    color: white;
+    border: none;
+    box-shadow: 0.1em 0.2em 1em -0.1em rgb(202, 43, 85);
+}
+
+#kiesleestijd {
+    border-radius: 0.5em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    padding-left: 1em;
+    padding-right: 1em;
+    margin-top: 1em;
+    margin-left: 0.5em;
+    background-color: rgb(255, 50, 104);
+    color: white;
+    border: none;
+    box-shadow: 0.1em 0.2em 1em -0.1em rgb(202, 43, 85);
+}
+
+button.leestijd {
+    background-color: rgb(255, 50, 104);
+    color: white;
+    font-family: "Nexa";
+    font-size: 1em;
+    border-radius: 0.7em;
+    border-color: grey;
+    border-width: 0.01em;
+    flex: 0.2 0 0;
+    height: 2em;
+    box-shadow: 0.1em 0.2em 1em -0.1em rgb(202, 43, 85);
+    padding-right: 1.8em;
+    padding-left: 1.4em;
+    border: none;
+}
+
+main section:nth-of-type(3) form {
+    opacity: 0;
+    width: 33.333%;
+    top: 0.8em;
+    background-color: none;
+    position: absolute;
+    z-index: 10;
+    font-family: "Nexa";
+}
+
+main section:nth-of-type(3) form button {
+    width: 100%;
+    background-color: white;
+    font-family: "Nexa";
+    font-size: 1em;
+    height: 2.3em;
+    text-align: center;
+    color: grey;
+    border-bottom-left-radius: 1em;
+    border-bottom-right-radius: 1em;
+    box-shadow: 0.0em 0.0em 1em 0.0em #000000;
+    border: none;
+}
+
+main section:nth-of-type(3) form {
+    left: 9.4em;
+    font-family: "Nexa";
+    color: white;
+    font-size: 1em;
+    text-align: center;
+    width: 7.5em;
+    border: none;
+}
+
+main section:nth-of-type(3) form:nth-child(2) {
+    left: 1.5em;
+}
+
+main section:nth-of-type(3) form input {
+    width: 10%;
+    height: 100%;
+    position: absolute;
+    right: 0;
+}
+
+main section:nth-of-type(3) form label {
+    padding-left: 0.5em;
+    line-height: 2em;
+    height: 2em;
+    width: 7.5em;
+    display: block;
+    position: relative;
+    /*    box-shadow: 0.1em 0.4em 1em 0.1em #000000;*/
+    background-color: #ff3268;
+    /*    border-radius: 0.5em;*/
+}
+
+
+/*main*/
+
+body {
+    background-color: #FCF8F4;
+}
+
+section aside {
+    text-align: center;
+    margin-top: 0.4em;
+    color: rgba(0, 214, 108, .9);
+    margin-bottom: 1em;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 1em;
+    margin-left: 1em;
+    margin-right: 1em;
+    padding-bottom: 2em;
+    padding-top: 2em;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+
+/*
+.fotoachter {
+    background-image: url(img/zee4.jpg);
+    padding: 1em;
+    padding-bottom: 2em;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    margin-bottom: 1em;
+}
+*/
+
+section aside h2 {
+    font-family: "Nexa";
+    font-weight: 500;
+    font-size: 3em;
+    text-align: center;
+}
+
+
+/*main*/
+
+
+/*DE VERHALEN */
+
+#verhalen {
+    margin-top: 1em;
+    margin-right: 0;
+    width: 100%;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-around;
+}
+
+#verhalen article {
+    width: 19em;
+    height: 16em;
+    margin-right: 0em;
+}
+
+#verhalen article a {
+    top: 0;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    display: block;
+}
+
+#verhalen a > * {
+    position: absolute;
+}
+
+#verhalen img {
+    height: auto;
+}
+
+#verhalen article a img:nth-of-type(1) {
+    top: 0em;
+    left: 0em;
+    width: 100%;
+    opacity: 0.8;
+}
+
+#verhaal:hover {
+    transform: scale(1.1);
+}
+
+h3 {
+    font-family: 'Nexa';
+    top: 1.3rem;
+    font-size: 0.9em;
+    color: white;
+    line-height: 10%;
+    display: block;
+}
+
+#verhalen article a img:nth-of-type(2) {
+    height: 3em;
+    width: 3em;
+    bottom: 2.5em;
+    left: 1em;
+    margin-right: 0.3em;
+}
+
+.aantallikes {
+    font-size: 0.7em;
+    font-family: 'Nexa';
+    color: white;
+    font-weight: 0;
+    bottom: 6em;
+    left: 3em;
+}
+
+#verhalen article a button {
+    left: 0.9em;
+    bottom: 0.3em;
+    width: 12em;
+    height: 7em;
+    border-radius: 0.8em;
+    background-color: rgb(40, 0, 160);
+    color: white;
+    opacity: 0.8;
+    transition-duration: 1s;
+    border: none;
+}
+
+#verhalen article a button h3 {
+    font-family: 'Nexa';
+    font-weight: 500;
+    font-size: 1.5em;
+    margin-left: 2em;
+    margin-top: 2em;
+}
+
+#verhalen article a button:hover {
+    background-color: rgb(202, 43, 85);
+    color: white;
+}
+
+.mobiel {
+    width: 100%;
+}
+
+.mobielverliefd {
+    width: 100%;
+}
+
+.desk,
+.tabverliefd {
+    display: none;
+}
+
+.deskverliefd {
+    display: none;
+}
+
+.tab {
+    display: none;
+}
+
+
+/*zoek schuif*/
+
+.fotoachter section form {
+    display: inline-block;
+    position: relative;
+    margin-bottom: 1em;
+    margin-top: 0em;
+    margin-left: 1.4em;
+    position: relative;
+    width: 15em;
+    height: inherit;
+    background-color: rgba(255, 255, 255, 0.8);
+    height: 2em;
+    border-radius: 1em;
+    /*    border: 0.04em solid grey;*/
+}
+
+.fotoachter section input[type="text"] {
+    background: none;
+    border: none;
+    color: navy;
+    display: inline-block;
+    flex-flow: row;
+    font-family: "Nexa";
+    font-size: 5vmin;
+    font-weight: 100;
+    height: 2em;
+    outline: none;
+    padding-right: 40px;
+    padding-left: 2em;
+    position: absolute;
+    right: 0;
+    width: 1em;
+    top: 0;
+    transition: width .30s;
+    z-index: 3;
+    border-radius: 1em;
+}
+
+.fotoachter section input[type="text"]:focus:hover {
+    border-bottom: 1px solid navy;
+    background-color: white;
+    /*    opacity: 0.7;*/
+    width: 15em;
+}
+
+.fotoachter section input[type="submit"] {
+    height: 2.3em;
+    width: 2.5em;
+    margin-right: 1.5em;
+    margin-top: 0.5em;
+    display: inline-block;
+    color: deeppink;
+    float: right;
+    background-image: url(img/zoeknavy.svg);
+    background-size: 1.5em;
+    background-repeat: no-repeat;
+    background-color: rgba(255, 255, 255, 0);
+    text-indent: -10000px;
+    border: none;
+    box-shadow: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    cursor: pointer;
+    cursor: pointer;
+    transition: opacity .4s ease;
+}
+
+.fotoachter section input:valid {
+    background-color: none;
+}
+
+.fotoachter section input[type="submit"]:hover {
+    display: inline-block;
+    color: deeppink;
+    background-color: white;
+    /*    opacity: 0.7;*/
+    box-shadow: 0 2px 2px 0 rgba(7, 7, 33, .15);
+    text-indent: -10000px;
+    border: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    cursor: pointer;
+    cursor: pointer;
+    transition: opacity .4s ease;
+}
+
+.suggesties {
+    max-height: 0;
+    overflow: hidden;
+    transition: .5s;
+    font-size: 1.1em;
+    font-family: "Nexa";
+    margin-top: 2em;
+    margin-left: 0em;
+    margin-bottom: 0em;
+    background-color: none
+}
+
+li {
+    color: navy;
+    font-weight: 500;
+    font-size: 0.70em;
+    font-family: "Nexa";
+    margin-bottom: 0em;
+    padding: 0.5em;
+}
+
+.fotoachter section li a {
+    font-weight: lighter;
+    color: white;
+}
+
+.fotoachter section li a:hover {
+    text-decoration: underline;
+}
+
+#search:focus + #search_submit + .suggesties {
+    max-height: 2em;
+    margin-bottom: 0em;
+}
+
+
+/*inloggen*/
+
+h2.logintekst {
+    font-family: 'Nexa';
+    font-size: 2.5em;
+    font-weight: 500;
+    color: #2800a0;
+    text-align: center;
+    margin-top: 1.1em;
+    /*    padding-top: 1em;*/
+    margin-bottom: 0.7em;
+}
+
+.blokinlog {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 1em;
+    margin-left: 1em;
+    margin-right: 1em;
+    text-align: left;
+    color: black;
+    padding-bottom: 1em;
+}
+
+.inputveld input[type="text"] {
+    text-align: left;
+    color: grey;
+    border-radius: 0.4em;
+    border: 0.04em solid grey;
+    width: 17em;
+    margin-top: 0.7em;
+    padding-left: 0.5em;
+    padding: 0.5em;
+    /*    margin-bottom: 2em;*/
+}
+
+input[type="email"] {
+    text-align: left;
+    color: grey;
+    border-radius: 0.4em;
+    border: 0.04em solid grey;
+    width: 17em;
+    margin-top: 0.7em;
+    padding-left: 0.5em;
+    padding: 0.5em;
+    /*    margin-bottom: 2em;*/
+}
+
+input[type="password"] {
+    text-align: left;
+    border: 0.04em solid grey;
+    border-radius: 0.4em;
+    box-shadow: none;
+    color: grey;
+    margin-top: 0.7em;
+    width: 17em;
+    padding-left: 0.5em;
+    padding: 0.5em;
+    /*    margin-bottom: 2em*/
+}
+
+form.aanmelden {
+    font-weight: 500;
+    margin-top: 1em;
+}
+
+aside.blokinlog a p:nth-of-type(1) {
+    color: grey;
+    text-decoration: underline;
+    font-size: 0.7em;
+    text-align: right;
+    margin-right: 1.5em;
+}
+
+aside.blokinlog a:nth-of-type(2) {
+    background-color: rgb(225, 50, 104);
+    border-radius: 1em;
+    border: none;
+    display: block;
+    color: white;
+    background-color: rgb(255, 50, 104);
+    box-shadow: 0.1em 0.2em 1em -0.1em rgb(202, 43, 85);
+    padding-left: 1.5em;
+    /* padding-right: 1em; */
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    font-weight: 500;
+    font-size: 1em;
+    margin-left: 5em;
+    margin-top: 2em;
+    margin-bottom: 1.5em;
+    margin-right: 5em;
+}
+
+.fotoachter {
+    background-image: url(img/zee4.jpg);
+    padding: 1em;
+    padding-bottom: 2em;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
+
+.geenaccount {
+    color: grey;
+    font-size: 0.8em;
+    text-align: center;
+}
+
+.verhaaltekst {
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 1em;
+    margin-left: 1em;
+    margin-right: 1em;
+    margin-top: 1em;
+    padding-bottom: 1em;
+    padding-top: 0.3em;
+    margin-bottom: 1em;
+}
+
+.verhaaltekst h3 {
+    font-size: 2em;
+    margin-top: 0.7em;
+    font-weight: 500;
+    color: rgb(255, 50, 104);
+    text-align: left;
+    margin-left: 0.7em;
+}
+
+
+/*JAVASCRIPT Like button*/
+
+section.draailike {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 0.5em;
+    height: 0.5em;
+    background-repeat: no-repeat;
+    top: 5em;
+    left: 17em;
+    transition: all 0.7s;
+}
+
+section.dancing {
+    transform: scale(.5) rotate(-360deg);
+}
+
+.draailike button {
+    padding-bottom: 5em;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+    line-height: 1em;
+    align-self: center;
+    font-size: 1em;
+    border-radius: 3em;
+    color: #fff;
+    margin-top: 4em;
+    background-color: navy;
+    border: none;
+}
+
+.draailike img {
+    margin-top: 0.5em;
+}
+
+.draailike button:hover {
+    background-color: rgb(255, 50, 104);
+}
+
+
+/*
+form:valid {
+    background-color: limegreen;
+}
+*/
+
+form:valid .registreerga {
+    background-color: rgb(255, 50, 104);
+    box-shadow: 0.1em 0.2em 1em -0.1em rgb(255, 50, 104);
+}
+
+
+/*Mediaquiries*/
+
+
+/* IPAD*/
+
+@media screen and (min-width: 48em) and (max-width: 66em) {
+    main {
+        max-width: 60em;
+        margin: auto;
+    }
+    #verhalen article {
+        width: 13em;
+        height: 13em;
+        margin-left: 1em;
+        margin-right: 1em;
+        margin-bottom: 2em;
+        flex-grow: 2;
+    }
+    #verhalen article a button {
+        right: 1.3em;
+        width: 11em;
+        height: 7em;
+    }
+    #verhalen article a button hover + div {
+        display: block;
+        right: 5em;
+        margin-left: 0.5em;
+        background-color: white;
+        height: 4em;
+        padding: 0.9em;
+    }
+    #verhalen article a button h3 {
+        font-family: 'Nexa';
+        font-weight: 500;
+        font-size: 1.5em;
+        margin-left: 2em;
+        margin-top: 1em;
+    }
+    #kiesvolgorde {
+        margin-left: 20em;
+    }
+    header div a img {
+        display: none;
+    }
+    header div a h1 {
+        display: block;
+        font-size: 1em;
+        text-align: left;
+        font-family: "Nexa";
+        line-height: 2.5em;
+        color: rgba(0, 214, 108, .9);
+        padding-left: 0;
+        margin-left: 42em;
+    }
+    header div a {
+        text-decoration: none;
+    }
+    .fotoachter {
+        padding: 1em;
+        background-size: cover;
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        margin-bottom: 1em;
+        padding-bottom: 2em;
+    }
+    section aside {
+        margin-top: 0.4em;
+        color: rgba(0, 214, 108, .9);
+        margin-bottom: 1em;
+        background-color: rgba(255, 255, 255, 0.8);
+        border-radius: 1em;
+        margin-left: 23em;
+        padding: 1em;
+        margin-right: 6em;
+    }
+    section aside h2 {
+        font-family: "Nexa";
+        font-weight: 500;
+        font-size: 3em;
+        text-align: center;
+    }
+    /*
+    .fotoachter input[type="text"] {
+        margin-left: 34em;
+    }
+*/
+    aside.blokinlog {
+        margin-left: 15em;
+        /* padding-right: 4em; */
+        padding-left: 1em;
+        height: 26em;
+        width: 18em;
+        margin-top: 10em;
+        margin-bottom: 15em;
+        padding-bottom: 32em;
+    }
+    .mobiel {
+        display: none;
+    }
+    .mobielverliefd {
+        display: none;
+    }
+    .desk {
+        display: none;
+    }
+    .tab {
+        display: block;
+        margin-left: 6em;
+    }
+    .tabverliefd {
+        display: block;
+        margin-left: 10em;
+    }
+    .geenaccount {
+        color: grey;
+        font-size: 0.8em;
+        text-align: center;
+        padding-left: 2em;
+    }
+    /*
+    .fotoachter {
+        height: 65em;
+    }
+*/
+    h2.logintekst {
+        margin-left: 0.5em;
+    }
+    .verhaaltekst p:nth-child(4) {
+        font-size: 1.4em;
+        font-weight: 0;
+        color: grey;
+        text-align: left;
+        margin-left: 1.4em;
+        margin-top: 0;
+    }
+    .verhaaltekst p:nth-child(3) {
+        font-size: 1.4em;
+    }
+    .verhaaltekst p:nth-child(2) {
+        font-size: 1.2em;
+        margin-left: 20em;
+    }
+    .verhaaltekst h3 {
+        font-size: 4em;
+        margin-left: 0.5em;
+    }
+    .draailike button {
+        padding-bottom: 5em;
+        padding-left: 1.5em;
+        padding-right: 1.5em;
+        line-height: 1em;
+        align-self: center;
+        font-size: 1em;
+        border-radius: 3em;
+        color: #fff;
+        margin-top: 7em;
+        background-color: navy;
+        border: none;
+        margin-left: 40em;
+    }
+    .fotoachter section input[type="text"] {
+        background-color: rgba(255, 255, 255, 0);
+        width: 1em;
+        height: 2em;
+        font-size: 1em;
+    }
+    .registreerga {
+        margin-left: 0;
+    }
+    .annuleer {
+        margin-bottom: 7em;
+        margin-left: 1.5em;
+    }
+    .fotoachter section form {
+        margin-left: 0em;
+    }
+    .verhaaltekst {
+        width: 40em;
+        margin-left: 4em;
+    }
+}
+
+
+/*IPAD
+
+
+/*DESKTOP*/
+
+@media screen and (min-width: 67em) {
+    main {
+        max-width: 100%;
+        margin: auto;
+    }
+    /*
+    .fotachter section aside{
+        max-width: 10em;
+    }
+*/
+    #verhalen article {
+        width: 14em;
+        height: 14em;
+        margin-left: 1em;
+        margin-right: 1em;
+        margin-bottom: 2em;
+        flex-grow: 2;
+    }
+    main section:nth-of-type(3) {
+        width: 50em;
+        height: 3em;
+        margin: auto;
+        margin-bottom: 1.5em;
+        margin-left: 4em;
+    }
+    h3 {
+        font-size: 0.9em;
+        flex-grow: 1;
+        margin-top: 0.4em;
+    }
+    #verhalen article a button {
+        right: 1.1em;
+        height: 6em;
+        width: 9em;
+    }
+    #verhalen article a button hover + div {
+        display: block;
+        right: 4.5em;
+        margin-left: 0.5em;
+        top: 3.6em;
+        background-color: white;
+        padding: 1em;
+        height: 8em;
+    }
+    #verhalen {
+        width: 70%;
+        margin-left: 18em;
+    }
+    article a div p {
+        font-size: 0.7em;
+    }
+    .fotoachter {
+        background-image: url(img/zee4.jpg);
+        width: 100%;
+        padding-bottom: 13.3em;
+    }
+    section aside {
+        margin-left: 48em;
+        /* margin-right: 50em; */
+        width: 20em;
+    }
+    header div a img {
+        display: none;
+    }
+    header div a h1 {
+        display: block;
+        font-size: 1em;
+        font-family: "Nexa";
+        line-height: 2.5em;
+        color: rgba(0, 214, 108, .9);
+        padding-left: 0;
+        margin-left: 100em;
+        text-decoration: none;
+    }
+    main section:nth-of-type(3) {
+        margin-left: 25em;
+    }
+    #verhalen article a button {
+        width: 12em;
+    }
+    .mobiel,
+    .tab,
+    .mobielverliefd,
+    .tabverliefd {
+        display: none;
+    }
+    .desk,
+    .deskverliefd {
+        display: block;
+        width: 60%;
+        margin-bottom: 2em;
+        margin-left: 25em;
+    }
+    .draailike button {
+        margin-left: 90em;
+    }
+    aside.blokinlog {
+        margin-left: 47em;
+        padding-left: 1em;
+        padding-right: 2em;
+        height: 26em;
+        width: 18em;
+        margin-top: 8em;
+        padding-bottom: 32em;
+    }
+    .verhaaltekst p:nth-child(4) {
+        font-size: 1.5em;
+        font-weight: 0;
+        color: grey;
+        text-align: left;
+        margin-left: 1.4em;
+        margin-top: 0;
+    }
+    .verhaaltekst p:nth-child(3) {
+        font-size: 1.5em;
+    }
+    .verhaaltekst p:nth-child(2) {
+        font-size: 1.5em;
+    }
+    .verhaaltekst h3 {
+        font-size: 3.5em;
+        margin-left: 0.5em;
+    }
+    .verhaaltekst {
+        width: 40em;
+        margin-left: 40em;
+    }
+    .draailike button {
+        padding-bottom: 5em;
+        padding-left: 1.5em;
+        padding-right: 1.5em;
+        line-height: 1em;
+        align-self: center;
+        font-size: 1em;
+        border-radius: 3em;
+        color: #fff;
+        margin-top: 7em;
+        background-color: navy;
+        border: none;
+        margin-left: 160em;
+        ;
+    }
+    .fotoachter section input[type="text"] {
+        background-color: rgba(255, 255, 255, 0);
+        width: 1em;
+        height: 2em;
+        font-size: 1em;
+    }
+    .geenaccount {
+        padding-left: 1.5em;
+    }
+    .annuleer {
+        margin-bottom: 7em;
+        margin-left: 0.8em;
+    }
+    #kiesvolgorde {
+        margin-left: 65em;
+    }
+    .fotoachter section form {
+        margin-left: 18em;
+    }
+}
